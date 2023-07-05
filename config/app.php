@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'DAW VA GO'),
+    'name' => env('APP_NAME', 'Where Do I Sleep'),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://dawvago.com'),
+    'url' => env('APP_URL', 'http://wdis.com'),
 
     'asset_url' => env('ASSET_URL'),
 

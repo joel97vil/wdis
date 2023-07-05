@@ -1,7 +1,7 @@
 <x-app>
 <div class="col-7 m-auto text-justify">
     <div class="mb-4 text-align-center">
-        <h3>TERMES I CONDICIONS DEL LLOC WEB DAWVAGO</h3>
+        <h3>TERMES I CONDICIONS DEL LLOC WEB WDIS</h3>
     </div>
         <b>INFORMACIÓ RELLEVANT</b>
     <div class="pb-3">
@@ -11,7 +11,7 @@
     </div>
         <b>LLICÈNCIA</b>
     <div class="pb-3">
-        Dawvago concedeix una llicència perquè els usuaris utilitzin els productes que són oferts en aquest lloc web d'acord amb els Termes i Condicions que es descriuen en aquest document.
+        WDIS concedeix una llicència perquè els usuaris utilitzin els productes que són oferts en aquest lloc web d'acord amb els Termes i Condicions que es descriuen en aquest document.
     </div>
         <b>ÚS NO AUTORITZAT</b>
     <div class="pb-3">
@@ -28,7 +28,7 @@
         <b>PRIVACITAT</b>
     <div class="pb-3">
         Aquesta garanteix que la informació personal que envieu compta amb la seguretat necessària. Les dades ingressades per usuari o en cas de requerir una validació de les comandes no seran lliurades a tercers, llevat que hagi de ser revelada en compliment a una ordre judicial o requeriments legals.
-        Dawvago es reserva els drets de canviar o modificar aquests termes sense avís previ.
+        WDIS es reserva els drets de canviar o modificar aquests termes sense avís previ.
     </div>
 </div>
 </x-app>
