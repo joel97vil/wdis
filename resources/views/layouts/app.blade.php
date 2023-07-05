@@ -27,12 +27,12 @@
 			<!-- Collection of nav links, forms, and other content for toggling -->
 			<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 				<div class="navbar-nav">
-					<a href="{{ route('landing') }}" class="nav-item nav-link">Inici</a>
-					<a href="{{ route('rooms-list') }}" class="nav-item nav-link">Troba la teva habitació</a>
-					<a href="{{ route('contact') }}" class="nav-item nav-link">Contacta</a>
+					<a href="{{ route('landing') }}" class="nav-item nav-link">Popular</a>
+					<a href="{{ route('rooms-list') }}" class="nav-item nav-link">Find your room</a>
+					<a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
 					@if (Auth::check())
 						@if(auth()->user()->role == '800')
-							<a href="{{ route('admin.index') }}" class="nav-item nav-link">Administració</a>
+							<a href="{{ route('admin.index') }}" class="nav-item nav-link">Administration</a>
 						@endif
 					@endif
 				</div>
@@ -55,7 +55,7 @@
 				@else
 				<div class="navbar-nav ml-auto action-buttons">
 					<div class="nav-item dropdown">
-						<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4"><i class="fa fa-user"></i> Entrar</a>
+						<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4"><i class="fa fa-user"></i> Sign in</a>
 						<div class="dropdown-menu action-form">
 							<form action="{{ route('signin') }}" method="post">
 							@csrf
@@ -77,7 +77,7 @@
 						</div>
 					</div>
 					<div class="nav-item dropdown">
-						<a href="{{ route('register') }}" class="btn btn-primary"><i class="fa fa-user"></i> Registrar-se</a>
+						<a href="{{ route('register') }}" class="btn btn-primary"><i class="fa fa-user"></i> Register</a>
 					</div>
 				</div>
 				@endif
@@ -108,10 +108,18 @@
 	<footer class="text-center text-white mt-5" style="background-color: #f1f1f1;">
   		<div class="container pt-4">
     		<section class="mb-4">
-				<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
-				<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
-				<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
-				<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+				<a class="btn btn-link btn-floating btn-lg text-dark m-1" target="_blank" href="https://joel97vil.000webhostapp.com/" role="button" data-mdb-ripple-color="dark">
+					<i class="fab fa-info"></i>
+				</a>
+				<a class="btn btn-link btn-floating btn-lg text-dark m-1" target="_blank" href="https://github.com/joel97vil" role="button" data-mdb-ripple-color="dark">
+					<i class="fab fa-github"></i>
+				</a>
+				<a class="btn btn-link btn-floating btn-lg text-dark m-1" target="_blank" href="https://www.linkedin.com/in/joel-faura-5b08381b5/" role="button" data-mdb-ripple-color="dark">
+					<i class="fab fa-linkedin"></i>
+				</a>
+				<a class="btn btn-link btn-floating btn-lg text-dark m-1" target="_blank" href="https://twitter.com/lopubill" role="button" data-mdb-ripple-color="dark">
+					<i class="fab fa-twitter"></i>
+				</a>
 			</section>
 		</div>
 
