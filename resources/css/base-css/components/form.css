@@ -1,0 +1,9 @@
+.c-form{
+    background-color: var(--form-bg-color);
+    color: white;
+    width: 75%;
+    padding: 30px;
+    margin: 50px auto 40px;
+    border-radius: 4px;
+    box-shadow: 7px 13px 37px #000;
+}

@@ -1,0 +1,7 @@
+:root {
+    --small-devices: 375px;
+    --medium-devices: 768px;
+    --medium-devices-landscape: 1024px;
+    --large-devices: 1200px;
+    --extra-large-devices: 1440px;
+}

@@ -1,0 +1,15 @@
+.c-input {
+    width: 100%;
+    background: inherit;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid var(--form-input-border-color);
+    font-size: 18px;
+    color: var(--color-white);
+    height: auto;
+}
+
+.c-select {
+    appearance: auto;
+}

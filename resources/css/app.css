@@ -1,0 +1,35 @@
+@import 'base-css/base.css';
+
+/* Forms */
+@import 'base-css/settings/form.css';
+@import 'base-css/components/form-fields/input.css';
+@import 'base-css/components/form.css';
+@import 'js-datepicker/dist/datepicker.min.css';
+@import 'select2/dist/css/select2.min.css';
+
+/* STYLE FOR SELECT2 PLUGIN */
+.select2-selection__choice
+{
+    color: black;
+}
+
+.select2-selection--multiple
+{
+    background-color: #24303c !important;
+    border: 1px solid #1f53c5 !important;
+}
+
+.select2-search__field
+{
+    background-color: #24303c !important;
+    color: white;
+}
+
+#rooms-list {
+    margin-top: 0;
+}
+
+/* LANDING - TARGETES D'HOTEL */
+.card-img-top {
+    max-height: 250px;
+}
