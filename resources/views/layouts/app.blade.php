@@ -106,8 +106,36 @@
 	@endif
     {!! $slot !!}
 	<footer class="text-center text-white mt-5" style="background-color: #f1f1f1;">
-  		<div class="container pt-4">
-    		<section class="mb-4">
+  		<div class="text-center text-dark pt-4 row row-cols-3 row-cols-sm-1 row-cols-md-3 row-cols-bg-3">
+			<div class="col mb-4">
+				<h4>Menu</h4>
+				<ul class="list-unstyled">
+					<li><a class="text-dark" href="{{ route('landing') }}">Popular</a></li>
+					<li><a class="text-dark" href="{{ route('rooms-list') }}">Find your room</a></li>
+					<li><a class="text-dark" href="{{ route('contact') }}">Contact</a></li>
+					@if (Auth::check())
+						@if(auth()->user()->role == '800')
+							<li><a href="{{ route('admin.index') }}" class="text-dark">Administration</a></li>
+						@endif
+					@endif
+				</ul>
+			</div>
+    		<div class="col mb-4">
+				<h4>Legal menu</h4>
+				<ul class="list-unstyled">
+					<li><a href="{{ route('termes') }}" target="_blank" class="text-dark">Terms and conditions</a></li>
+					<li><a href="#" target="_blank" class="text-dark">License</a></li>
+				</ul>
+			</div>
+			<div class="col mb-4">
+				<h3>SEO</h3>
+				<p></p>
+			</div>
+		</div>
+
+		<div class="text-center text-dark p-3 row row-cols-2 row-cols-sm-1 row-cols-md-2 row-cols-bg-2" style="background-color: rgba(0, 0, 0, 0.2);">
+			<div class="col">© 2022 Copyright: <a class="text-dark" href="http://wdis.com/">wdis.com</a></div>
+			<div class="col">
 				<a class="btn btn-link btn-floating btn-lg text-dark m-1" target="_blank" href="https://joel97vil.000webhostapp.com/" role="button" data-mdb-ripple-color="dark">
 					<i class="fab fa-info"></i>
 				</a>
@@ -120,11 +148,7 @@
 				<a class="btn btn-link btn-floating btn-lg text-dark m-1" target="_blank" href="https://twitter.com/lopubill" role="button" data-mdb-ripple-color="dark">
 					<i class="fab fa-twitter"></i>
 				</a>
-			</section>
-		</div>
-
-		<div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-			© 2022 Copyright: <a class="text-dark" href="http://wdis.com/">wdis.com</a> - <a class="text-dark" href="{{ route('termes') }}" target="_blank"	 class="nav-item nav-link">Termes i condicions</a>
+			</div>
 		</div>
     </footer>
 </body>
