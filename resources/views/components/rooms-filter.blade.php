@@ -1,4 +1,4 @@
-<div class="c-rooms-filter">
+<div class="c-rooms-filter mb-4 p-4 jumbotron" style="background-color: #f1f1f1;">
     <div><h3>Find what you're looking for, searching by</h3></div>
 
     <div class="c-rooms-filter__title fw-bold">Words:</div>
