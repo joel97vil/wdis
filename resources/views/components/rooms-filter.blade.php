@@ -3,7 +3,7 @@
 
     <div class="c-rooms-filter__title fw-bold">Words:</div>
     <div>
-        <input class="form-control shuffle-filter" id="general-filter" type="text" placeholder="Barcelona, Mountain, Hostel, Cheap, Portugal" />
+        <input class="form-control shuffle-filter" id="general-filter" type="text" placeholder="Barcelona, Mountain, Hostel, Cheap, Portugal" value="{{ $searchTxt }}" />
     </div>
 
     <div class="c-rooms-filter__title fw-bold">Establishment:</div>

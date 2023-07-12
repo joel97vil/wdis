@@ -4,7 +4,7 @@
             Filters
         </button>
         <div class="collapse" id="collapse-filters">
-            <x-rooms-filter />
+            <x-rooms-filter :searchTxt="$searchTxt" />
         </div>
         <div id="rooms-list" class="row row-cols-1 row-cols-sm-1 row-cols-md-4 row-cols-bg-6 g-4">
             @foreach($rooms as $room)

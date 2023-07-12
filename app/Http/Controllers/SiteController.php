@@ -17,7 +17,7 @@ class SiteController extends Controller
 
     public function index()
     {
-        $rooms = Room::query()->whereNull('deleted_at')->get();
+        $rooms = Room::query()->whereNull('deleted_at')->take(12)->get();
 
         return view('welcome', ['rooms' => $rooms]);
     }
@@ -124,7 +124,7 @@ class SiteController extends Controller
         return view('common.termes');
     }
 
-    public function roomsList(){
+    public function roomsList(Request $request){
         $rooms = Room::with(['roomServices'])->whereNull('deleted_at')->get();
         $rooms = $rooms->map(function ($room) {
             $services = [];
@@ -141,7 +141,12 @@ class SiteController extends Controller
             return $room;
         });
 
-        return view('common.rooms-list', ['rooms' => $rooms]);
+        $searchTxt = null;
+        if($request->query("search-text") != null){
+            $searchTxt = $request->query("search-text");
+        }
+
+        return view('common.rooms-list', ['rooms' => $rooms, 'searchTxt' => $searchTxt]);
     }
 
 }

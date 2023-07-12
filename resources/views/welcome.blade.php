@@ -4,10 +4,10 @@
             <div class="d-flex justify-content-center">
                 <h2>Find what you're looking for!</h2>
             </div>
-            <form class="form-inline justify-content-around" action="{{ route('rooms-list') }}">
+            <form class="form-inline justify-content-around" method="get" action="{{ route('rooms-list') }}">
                 <div class="form-group input-group-lg">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Barcelona, Mountain, Hostel, Cheap, Portugal"/>
+                        <input type="text" class="form-control" name="search-text" id="search-text" placeholder="Barcelona, Mountain, Hostel, Cheap, Portugal"/>
                     </div>
                     <div class="col">
                         <button type="submit" class="btn btn-lg btn-warning">Find</button>

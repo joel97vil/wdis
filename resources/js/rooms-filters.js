@@ -23,14 +23,14 @@ if (container) {
         shuffle.filter(filters);
     });
 
-    $('.shuffle-filter').on('change', function(event) {
+    /*$('.shuffle-filter').on('change', function(event) {
         const input = event.currentTarget;
         if(input.value) {
             filters.push(input.selected);
         }
 
         shuffle.filter(filters);
-    });
+    });*/
 
     $('.shuffle-filter').on('keyup', function(event) {
         //const input = event.currentTarget;
