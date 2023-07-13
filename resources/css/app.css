@@ -8,7 +8,7 @@
 @import 'select2/dist/css/select2.min.css';
 
 /* STYLE FOR SELECT2 PLUGIN */
-.select2-selection__choice
+/*.select2-selection__choice
 {
     color: black;
 }
@@ -23,7 +23,7 @@
 {
     background-color: #24303c !important;
     color: white;
-}
+}*/
 
 #rooms-list {
     margin-top: 0;

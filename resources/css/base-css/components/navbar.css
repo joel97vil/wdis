@@ -70,12 +70,14 @@
 }
 .navbar .btn-primary, .navbar .btn-primary:active {
     color: #fff;
-    background: #33cabb !important;
+    /*background: #33cabb !important;*/
+    background: #0069d9 !important;
     border: none;
 }
 .navbar .btn-primary:hover, .navbar .btn-primary:focus {
     color: #fff;
-    background: #31bfb1 !important;
+    /*background: #31bfb1 !important;*/
+    background: #0062cc !important;
 }
 .navbar .social-btn .btn, .navbar .social-btn .btn:hover {
     color: #fff;

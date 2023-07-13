@@ -11,5 +11,13 @@
                 <x-room-card :room="$room" />
             @endforeach
         </div>
+        <div class="row row-cols-1">
+            <div class="col d-flex justify-content-center">
+                <p>You still didn't find what you're looking for?</p>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <button class="btn btn-warning" type="button" id="load-more">Load more</button>
+            </div>
+        </div>
     </div>
 </x-app>

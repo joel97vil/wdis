@@ -32,73 +32,79 @@
         <hr />
     </div>
 
-    <form class="c-form" action="{{ $user->id !== null ? route('users.update') : route('users.store') }}" method="post">
+    <div class="col-9 m-auto text-justify">
+        <form action="{{ $user->id !== null ? route('users.update') : route('users.store') }}" method="post">
 
-        @csrf
-        <input name="id" id="id" type="hidden" value="{{ $user->id }}">
+            @csrf
+            <input name="id" id="id" type="hidden" value="{{ $user->id }}">
 
-        <div class="form-group">
-            <div class="row">
-                <div class="col-4">
-                    <label for="username">Nom d'usuari</label>
-                    <input class="form-control c-input" name="username" id="username" aria-label="Nom d'usuari" type="text" value="{{$user->username}}" {{$readonly}} />
+            <div class="form-group jumbotron">
+                <div class="row row-cols-3 row-cols-sm-1 row-cols-md-3 row-cols-bg-4 px-4">
+                    <div class="col">
+                        <label for="username">Nom d'usuari</label>
+                        <input class="form-control c-input" name="username" id="username" aria-label="Nom d'usuari" type="text" value="{{$user->username}}" {{$readonly}} />
+                    </div>
+                    <div class="col">
+                        <label for="password">Contrassenya</label>
+                        <input class="form-control c-input" name="password" id="password" aria-label="Contrassenya" type="password" {{$readonly}} />
+                    </div>
+                    <div class="col">
+                        <label for="role">Rol</label>
+                        <select class="form-control c-input c-select" name="role" id="role" {{$readonly}}>
+                            <option value="800" <?= $user->role == 800 ? 'selected' : '' ?>>Administrador</option>
+                            <option value="700" <?= $user->role == 700 ? 'selected' : '' ?>>Llogater</option>
+                            <option value="600" <?= $user->role == 600 || $user->role == null ? 'selected' : '' ?>>Client</option>
+                        </select>
+                    </div>
+                    <!--<div class="col-4" style="visibility:collapse;">
+                        <label for="confirm_password">Repeteix la contrassenya</label>
+                        <input class="form-control" name="confirm_password" id="confirm_password" aria-label="Repeteix la contrassenya" type="password" {{$readonly}} />
+                    </div>-->
                 </div>
-                <div class="col-4">
-                    <label for="password">Contrassenya</label>
-                    <input class="form-control c-input" name="password" id="password" aria-label="Contrassenya" type="password" {{$readonly}} />
+                <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2 row-cols-bg-2 px-4">
+                    <div class="col">
+                        <label for="name">Nom complet</label>
+                        <input class="form-control c-input" name="name" id="name" type="text" aria-label="Nom complet" value="{{$user->name}}" {{$readonly}} />
+                    </div>
+                    <div class="col">
+                        <label for="nif">NIF/NIE/CIF</label>
+                        <input class="form-control c-input" name="nif" id="nif" type="text" aria-label="NIF/NIE/CIF" value="{{$user->nif}}" {{$readonly}} />
+                    </div>
+                    <div class="col-4">
+                        <!-- TODO: Incloure foto i adjuntable de foto -->
+                    </div>
                 </div>
-                <div class="col-4">
-                    <label for="role">Rol</label>
-                    <select class="form-control c-input c-select" name="role" id="role" {{$readonly}}>
-                        <option value="800" <?= $user->role == 800 ? 'selected' : '' ?>>Administrador</option>
-                        <option value="700" <?= $user->role == 700 ? 'selected' : '' ?>>Llogater</option>
-                        <option value="600" <?= $user->role == 600 || $user->role == null ? 'selected' : '' ?>>Client</option>
-                    </select>
+                <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2 row-cols-bg-2 px-4">
+                    <div class="col">
+                        <label for="city">Població</label>
+                        <input class="form-control c-input" name="city" id="city" type="text" aria-label="Població" value="{{$user->city}}" {{$readonly}}/>
+                    </div>
+                    <div class="col">
+                        <label for="postal_code">Codi postal</label>
+                        <input class="form-control c-input" name="postal_code" id="postal_code" type="text" aria-label="Codi postal" value="{{$user->postal_code}}" {{$readonly}} />
+                    </div>
+                    <div class="col">
+                        <label for="address">Adreça</label>
+                        <input class="form-control c-input" name="address" id="address" type="text" aria-label="Adreça" value="{{$user->address}}" {{$readonly}} />
+                    </div>
                 </div>
-                <!--<div class="col-4" style="visibility:collapse;">
-                    <label for="confirm_password">Repeteix la contrassenya</label>
-                    <input class="form-control" name="confirm_password" id="confirm_password" aria-label="Repeteix la contrassenya" type="password" {{$readonly}} />
-                </div>-->
+
+                <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2 row-cols-bg-2 px-4">
+                    <div class="col">
+                        @if($readonly == null)
+                            <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Guardar</button>
+                        @endif
+                        
+                        @if(auth()->user()->role == 800)
+                            <a href="{{ route('admin.users') }}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Enrere</a>
+                        @else
+                            <a href="{{ route('landing') }}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Enrere</a>
+                        @endif
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-4">
-                    <label for="name">Nom complet</label>
-                    <input class="form-control c-input" name="name" id="name" type="text" aria-label="Nom complet" value="{{$user->name}}" {{$readonly}} />
-                </div>
-                <div class="col-4">
-                    <label for="nif">NIF/NIE/CIF</label>
-                    <input class="form-control c-input" name="nif" id="nif" type="text" aria-label="NIF/NIE/CIF" value="{{$user->nif}}" {{$readonly}} />
-                </div>
-                <div class="col-4">
-                    <!-- TODO: Incloure foto i adjuntable de foto -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <label for="city">Població</label>
-                    <input class="form-control c-input" name="city" id="city" type="text" aria-label="Població" value="{{$user->city}}" {{$readonly}}/>
-                </div>
-                <div class="col-2">
-                    <label for="postal_code">Codi postal</label>
-                    <input class="form-control c-input" name="postal_code" id="postal_code" type="text" aria-label="Codi postal" value="{{$user->postal_code}}" {{$readonly}} />
-                </div>
-                <div class="col-6">
-                    <label for="address">Adreça</label>
-                    <input class="form-control c-input" name="address" id="address" type="text" aria-label="Adreça" value="{{$user->address}}" {{$readonly}} />
-                </div>
-            </div>
-
-            @if($readonly == null)
-            <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Guardar</button>
-            @endif
-
-            @if(auth()->user()->role == 800)
-                <a href="{{ route('admin.users') }}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Enrere</a>
-            @else
-                <a href="{{ route('landing') }}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Enrere</a>
-            @endif
-        </div>
-    </form>
+        </form>
+    </div>
 
     @if((auth()->user()->role == 800 || auth()->user()->role == 700) && $user != null)
     <div class="col-9 m-auto text-justify" id="user-rooms" style="display:none;">

@@ -18,7 +18,7 @@
         @endforeach
     </div>-->
     <div>
-        <select class="form-control shuffle-filter" id="establishment-filter">
+        <select class="form-control shuffle-filter select2" id="establishment-filter">
             @foreach(getEstablishments() as $establishment)
                 <option id="e_{{ $establishment->id }}" value="e_{{ $establishment->id }}">
                     {{ $establishment->name }}

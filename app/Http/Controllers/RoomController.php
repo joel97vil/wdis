@@ -99,7 +99,6 @@ class RoomController extends Controller
         abort('404');
     }
 
-
     public function edit($id)
     {
         $room = Room::query()->where('id', $id)->whereNull('deleted_at')->first();

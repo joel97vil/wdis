@@ -1,11 +1,25 @@
 {
   "resources/js/app.js": {
-    "file": "assets/app.52e1a278.js",
+    "file": "assets/app.caa5394a.js",
     "src": "resources/js/app.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_select2.fad3f0d2.js"
+    ]
+  },
+  "resources/js/room.js": {
+    "file": "assets/room.1b20f9d9.js",
+    "src": "resources/js/room.js",
+    "isEntry": true,
+    "imports": [
+      "_select2.fad3f0d2.js"
+    ]
+  },
+  "_select2.fad3f0d2.js": {
+    "file": "assets/select2.fad3f0d2.js"
   },
   "resources/css/app.css": {
-    "file": "assets/app.ead13ec8.css",
+    "file": "assets/app.4514edd8.css",
     "src": "resources/css/app.css",
     "isEntry": true
   }

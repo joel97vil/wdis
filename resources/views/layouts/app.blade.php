@@ -20,7 +20,7 @@
     <header>
         <!-- As a heading -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a href="{{ route('landing') }}" class="navbar-brand">Where <b>Do</b> I <b>Sleep</b>?</a>
+            <a href="{{ route('landing') }}" class="navbar-brand">Where <b class="text-warning">Do</b> I <b class="text-warning">Sleep</b>?</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
