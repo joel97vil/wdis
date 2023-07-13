@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="public/assets/img/about" width="400" alt="WDIS Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="http://joel97vil.000webhostapp.com/img/temp_logo.PNG" width="400" alt="WDIS Logo"></a></p>
 
 <!--<p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
