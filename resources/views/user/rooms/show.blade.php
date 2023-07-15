@@ -34,10 +34,10 @@
                     <h6><b>Adreça:</b> <span>{{$room->establishment->address }},</span> <span>{{$room->address}}</span></h6>
                     <h6><b>Capacitat:</b> <span>{{$room->occupancy}} persones</span></h6>
                     <h6><b>Descripció:</b> <span>{{$room->description}}</span></h6>
-                    @if($room->roomServices != null && count($room->roomServices) > 0)
+                    @if($room->services != null && count($room->services) > 0)
                     <h6 style="display:inline;"><b>Serveis:</b></h6>
                     <p style="display:inline;">
-                        @foreach($room->roomServices as $rhs)
+                        @foreach($room->services as $rhs)
                             <span class="badge rounded-pill bg-info">{{$rhs->service->name}}</span> 
                         @endforeach
                     </p>

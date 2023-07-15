@@ -6,7 +6,7 @@ use Session;
 use App\Models\Room;
 use App\Http\Requests\StoreRoomRequest;
 use App\Http\Requests\UpdateRoomRequest;
-use App\Models\RoomServices;
+use App\Models\RoomHasService;
 use App\Models\User;
 
 class RoomController extends Controller
@@ -73,7 +73,7 @@ class RoomController extends Controller
         {
             foreach($request->input('services') as $srv)
             {
-                $service = new RoomServices();
+                $service = new RoomHasService();
                 $service->service_id = $srv;
                 $service->room_id = $room->id;
                 $service->save();
@@ -135,12 +135,12 @@ class RoomController extends Controller
 
         $room->save();
 
-        RoomServices::where('room_id', $room->id)->delete();
+        RoomHasService::where('room_id', $room->id)->delete();
         if($request->input('services') != null)
         {
             foreach($request->input('services') as $srv)
             {
-                $service = new RoomServices();
+                $service = new RoomHasService();
                 $service->service_id = $srv;
                 $service->room_id =  $room->id;
                 $service->save();

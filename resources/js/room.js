@@ -12,7 +12,8 @@ function InitializeSelect2()
         $('.select2').select2({
             placeholder: "Serveis de l'habitació",
             allowClear: true,
-            theme: "classic"
+            multiple: true,
+            class: "form-control"
         });
     }
 }

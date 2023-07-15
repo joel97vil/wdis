@@ -125,14 +125,14 @@ class SiteController extends Controller
     }
 
     public function roomsList(Request $request){
-        $rooms = Room::with(['roomServices'])->whereNull('deleted_at')->get();
+        $rooms = Room::with(['services'])->whereNull('deleted_at')->get();
         $rooms = $rooms->map(function ($room) {
             $services = [];
             $room->groups = [
                 "e_{$room->establishment->id}",
             ];
 
-            foreach ($room->roomServices as $service) {
+            foreach ($room->services as $service) {
                 $services[] = "s_{$service->service_id}";
             }
 

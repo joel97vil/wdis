@@ -60,7 +60,7 @@
                     <div class="col">
                         <?php
                         $services_id = [];
-                        foreach($room->roomServices as $srv)
+                        foreach($room->services as $srv)
                         {
                             array_push($services_id, $srv->service_id);
                         }

@@ -20,8 +20,13 @@ class Room extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function roomServices()
+    public function services()
     {
-        return $this->hasMany(RoomServices::class, 'room_id');
+        return $this->hasMany(RoomHasService::class, 'room_id');
+    }
+
+    public function images()
+    {
+        return $this->hasMany(RoomHasImage::class, 'room_id');
     }
 }

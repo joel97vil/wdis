@@ -1,0 +1,1 @@
+import{s as l,j as e}from"./select2.fad3f0d2.js";l(e);e("document").ready(function(){t()});function t(){e(".select2").length>0&&e(".select2").select2({placeholder:"Serveis de l'habitaci\xF3",allowClear:!0,multiple:!0,class:"form-control"})}

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Temps de generació: 12-07-2023 a les 19:03:45
+-- Temps de generació: 15-07-2023 a les 16:52:15
 -- Versió del servidor: 10.4.24-MariaDB
 -- Versió de PHP: 8.1.6
 
@@ -61,6 +61,23 @@ INSERT INTO `bookings` (`id`, `user_id`, `room_id`, `initial_date`, `final_date`
 (28, 15, 1, '2022-12-21 08:54:26', '2022-12-21 08:54:26', 4, '194.00', '2022-12-21 07:52:01', '2022-12-21 07:54:26', '2022-12-21 07:54:26'),
 (29, 1, 5, '2022-12-21 08:55:36', '2022-12-21 08:55:36', 1, '208.00', '2022-12-21 07:55:22', '2022-12-21 07:55:36', '2022-12-21 07:55:36'),
 (30, 13, 3, '2023-06-26 22:00:00', '2023-06-27 22:00:00', 9, '242.00', '2023-06-27 17:07:23', '2023-06-27 17:07:23', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de la taula `booking_has_reviews`
+--
+
+CREATE TABLE `booking_has_reviews` (
+  `id` bigint(20) NOT NULL,
+  `booking_id` bigint(20) NOT NULL,
+  `points` int(11) NOT NULL,
+  `title` text NOT NULL,
+  `description` blob DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp(),
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -189,10 +206,10 @@ INSERT INTO `rooms` (`id`, `name`, `description`, `address`, `photo`, `price`, `
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `room_images`
+-- Estructura de la taula `room_has_images`
 --
 
-CREATE TABLE `room_images` (
+CREATE TABLE `room_has_images` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `alt` varchar(255) DEFAULT NULL,
@@ -204,20 +221,20 @@ CREATE TABLE `room_images` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `room_services`
+-- Estructura de la taula `room_has_services`
 --
 
-CREATE TABLE `room_services` (
+CREATE TABLE `room_has_services` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `room_id` bigint(20) UNSIGNED NOT NULL,
   `service_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Bolcament de dades per a la taula `room_services`
+-- Bolcament de dades per a la taula `room_has_services`
 --
 
-INSERT INTO `room_services` (`id`, `room_id`, `service_id`) VALUES
+INSERT INTO `room_has_services` (`id`, `room_id`, `service_id`) VALUES
 (11, 2, 4),
 (15, 1, 2),
 (16, 1, 9),
@@ -302,6 +319,12 @@ ALTER TABLE `bookings`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índexs per a la taula `booking_has_reviews`
+--
+ALTER TABLE `booking_has_reviews`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índexs per a la taula `establishments`
 --
 ALTER TABLE `establishments`
@@ -328,15 +351,15 @@ ALTER TABLE `rooms`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índexs per a la taula `room_images`
+-- Índexs per a la taula `room_has_images`
 --
-ALTER TABLE `room_images`
+ALTER TABLE `room_has_images`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índexs per a la taula `room_services`
+-- Índexs per a la taula `room_has_services`
 --
-ALTER TABLE `room_services`
+ALTER TABLE `room_has_services`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -363,6 +386,12 @@ ALTER TABLE `bookings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
+-- AUTO_INCREMENT per la taula `booking_has_reviews`
+--
+ALTER TABLE `booking_has_reviews`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT per la taula `establishments`
 --
 ALTER TABLE `establishments`
@@ -387,15 +416,15 @@ ALTER TABLE `rooms`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT per la taula `room_images`
+-- AUTO_INCREMENT per la taula `room_has_images`
 --
-ALTER TABLE `room_images`
+ALTER TABLE `room_has_images`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT per la taula `room_services`
+-- AUTO_INCREMENT per la taula `room_has_services`
 --
-ALTER TABLE `room_services`
+ALTER TABLE `room_has_services`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --

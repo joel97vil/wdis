@@ -20,7 +20,7 @@ function firstSearch()
     if($('#general-filter').val().length > 0)
     {
         //TODO: Fire shufflejs filtering event
-        $('#general-filter').trigger();
+        //$('#general-filter').trigger();
     }
 }
 
@@ -28,9 +28,10 @@ function initializeSelect2()
 {
     if($('.select2').length > 0){
         $('.select2').select2({
-            placeholder: "Serveis de l'habitació",
+            placeholder: "Hotel, building, establishment",
             allowClear: true,
-            theme: "classic"
+            class: "form-control",
+            width: "resolve"
         });
     }
 }

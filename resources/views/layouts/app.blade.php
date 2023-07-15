@@ -114,6 +114,7 @@
 					<li><a class="text-dark" href="{{ route('rooms-list') }}">Find your room</a></li>
 					<li><a class="text-dark" href="{{ route('contact') }}">Contact</a></li>
 					@if (Auth::check())
+						<li><a href="{{ route('users.edit', ['id' => auth()->user()->id]) }}" class="text-dark">Your user</a></li>
 						@if(auth()->user()->role == '800')
 							<li><a href="{{ route('admin.index') }}" class="text-dark">Administration</a></li>
 						@endif
@@ -125,11 +126,39 @@
 				<ul class="list-unstyled">
 					<li><a href="{{ route('termes') }}" target="_blank" class="text-dark">Terms and conditions</a></li>
 					<li><a href="#" target="_blank" class="text-dark">License</a></li>
+					<li><a href="#" target="_blank" class="text-dark">FAQs</a></li>
+					<li><a class="text-dark" href="{{ route('contact') }}">Question? Contact us</a></li>
 				</ul>
 			</div>
 			<div class="col mb-4">
 				<h3>SEO</h3>
-				<p></p>
+				<p>
+				<span class="badge badge-secondary">Luxury accommodations</span>
+				<span class="badge badge-secondary">Best hotel deals</span>
+				<span class="badge badge-secondary">Affordable lodging options</span>
+				<span class="badge badge-secondary">Boutique hotel experience</span>
+				<span class="badge badge-secondary">Exclusive amenities</span>
+				<span class="badge badge-secondary">Prime location for sightseeing</span>
+				<span class="badge badge-secondary">Family-friendly hotels</span>
+				<span class="badge badge-secondary">Business travel solutions</span>
+				<span class="badge badge-secondary">Comfortable and spacious rooms</span>
+				<span class="badge badge-secondary">Resort-style accommodations</span>
+				<span class="badge badge-secondary">Top-rated customer service</span>
+				<span class="badge badge-secondary">Pet-friendly hotels</span>
+				<span class="badge badge-secondary">Staycation options</span>
+				<span class="badge badge-secondary">Convenient online booking</span>
+				<span class="badge badge-secondary">Seaside resorts</span>
+				<span class="badge badge-secondary">Business conference facilities</span>
+				<span class="badge badge-secondary">Wellness retreats</span>
+				<span class="badge badge-secondary">Romantic getaways</span>
+				<span class="badge badge-secondary">Award-winning hospitality</span>
+				<span class="badge badge-secondary">Unforgettable hotel experiences</span>
+				<span class="badge badge-secondary">City center accommodations</span>
+				<span class="badge badge-secondary">Mountain view hotels</span>
+				<span class="badge badge-secondary">Rooftop pool and bar</span>
+				<span class="badge badge-secondary">Eco-friendly lodging</span>
+				<span class="badge badge-secondary">Charming boutique hotels</span>
+				</p>
 			</div>
 		</div>
 

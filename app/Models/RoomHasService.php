@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class RoomServices extends Model
+class RoomHasService extends Model
 {
     use HasFactory;
-    protected $table = 'room_services';
+    protected $table = 'room_has_services';
     public $timestamps = false;
 
     public function room()
