@@ -26,7 +26,7 @@ if (container) {
     $('.shuffle-filter').on('change', function(event) {
         const input = event.currentTarget;
         if(input.value) {
-            filters.splice(filters.find(x => x.indexOf("e_") > -1));
+            filters.splice(filters.find(x => x.indexOf("e_") > -1) || x.indexOf("tp_") > -1);
             filters.push(input.value);
         }
 
@@ -41,8 +41,11 @@ if (container) {
             shuffle.filter((element, obj) => {
                 const name = element.getAttribute('data-name').toLowerCase().trim();
                 const city = element.getAttribute('data-city').toLowerCase().trim();
-            
-                return name.includes(searchTxt) || city.includes(searchTxt);
+                const establishment = element.getAttribute('data-establishment-name').toLowerCase().trim();
+                const occupancy = element.getAttribute('data-occupancy').trim();
+                const address = element.getAttribute('data-address').toLowerCase().trim();
+                
+                return name.includes(searchTxt) || city.includes(searchTxt) || establishment.includes(searchTxt) || occupancy.includes(searchTxt) || address.includes(searchTxt);
             });
         }
     });

@@ -1,9 +1,15 @@
-<div class="c-rooms-filter mb-4 p-4 jumbotron" style="background-color: #f1f1f1;">
+<div class="c-rooms-filter mb-4 mt-4 p-4 jumbotron" style="background-color: #f1f1f1;">
     <div><h3>Find what you're looking for, searching by</h3></div>
 
     <div class="c-rooms-filter__title fw-bold">Words:</div>
     <div>
         <input class="form-control shuffle-filter" id="general-filter" type="text" placeholder="Barcelona, Mountain, Hostel, Cheap, Portugal" value="{{ $searchTxt }}" />
+    </div>
+
+    <div class="c-rooms-filter__title fw-bold mt-2">Establishment type:</div>
+    <div class="btn-group btn-group-toggle" data-toogle="buttons">
+        <x-checkbox id="tp_1" name="shuffle-filter" value="tp_HOTEL" label="Hotel" />
+        <x-checkbox id="tp_2" name="shuffle-filter" value="tp_APARTMENT" label="Apartment" />
     </div>
 
     <div class="c-rooms-filter__title fw-bold">Establishment:</div>
@@ -33,4 +39,8 @@
             <x-checkbox id="s_{{ $service->id }}" name="shuffle-filter" value="s_{{ $service->id }}" :label="$service->name" />
         @endforeach
     </div>
+
+    <div class="c-rooms-filter__title fw-bold mt-2">Occupancy:</div>
+
+    <div class="c-rooms-filter__title fw-bold mt-2">Price:</div>
 </div>

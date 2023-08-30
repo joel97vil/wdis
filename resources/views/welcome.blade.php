@@ -16,7 +16,7 @@
             </form>
         </div>
         <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-4 row-cols-bg-6 g-4">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-4 row-cols-lg-6 g-4">
                 @foreach($rooms as $room)
                     <x-room-card :room="$room" />
                 @endforeach

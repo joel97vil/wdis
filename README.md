@@ -12,19 +12,15 @@
 The propose of this project is to improve my skills integrating PHP and JS libraries and plugins on a web enviroment rent room simulation webpage.
 The startup project is on https://github.com/edseto/projecte-daw
 
-
-## Support
-Do you like my work? Buy me a coffee [Paypal](https://patreon.com/taylorotwell).
+<!--## Support
+Do you like my work? Buy me a coffee [Paypal](https://patreon.com/taylorotwell).-->
 
 ## Premium Partners
-- **[Laravel] (https://laravel.com)
-- **[Institut Obert de Catalunya (IOC)] (https://ioc.xtec.cat/)
-- **[Edgar Seguí (edseto)] (https://github.com/edseto)
-- **[Pedro Cortés (BluestormDNA)] (https://github.com/BluestormDNA)
-- **[Oriol Fonolla (orioolfs)] (https://github.com/orioolfs)
-
-## Code of Conduct
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- [Laravel](https://laravel.com)
+- [Institut Obert de Catalunya (IOC)](https://ioc.xtec.cat/)
+- [Edgar Seguí (edseto)](https://github.com/edseto)
+- [Pedro Cortés (BluestormDNA)](https://github.com/BluestormDNA)
+- [Oriol Fonolla (orioolfs)](https://github.com/orioolfs)
 
 ## Security Vulnerabilities and Contributing
 If you discover a bugs or security vulnerabilities, please send an e-mail to me via [joel97vil@gmail.com](mailto:joel97vil@gmail.com). Any collaboration will be thankful.

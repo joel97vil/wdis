@@ -1,5 +1,5 @@
-<div class="col mb-4" data-name="{{ $room->name }}" data-city="{{ $room->establishment->city }}"
-    data-establishment="{{ $room->establishment->id }}" data-price="{{ $room->price }}" data-capacity=" {{ $room->occupancy }}"
+<div class="col mb-4" data-name="{{ $room->name }}" data-city="{{ $room->establishment->city }}" data-occupancy="{{ $room->occupancy }}" data-address="{{ strtolower(trim($room->address)) }}"
+    data-establishment="{{ $room->establishment->id }}" data-establishment-name="{{ $room->establishment->name }}" data-price="{{ $room->price }}" data-capacity=" {{ $room->occupancy }}" data-establishment-type="{{ strtolower($room->establishment_type) }}"
     data-groups='@json($room->groups)' >
     <div class="card">
         <a href="{{ route('room.show', ['id' => $room->id]) }}">
