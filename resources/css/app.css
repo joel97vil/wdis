@@ -24,6 +24,9 @@
     background-color: #24303c !important;
     color: white;
 }*/
+html {
+    scroll-behavior: smooth !important;
+}
 
 #rooms-list {
     margin-top: 0;

@@ -56,7 +56,7 @@
                 <form action="{{ route('booking.store') }}" method="post">
                     @csrf
                     <div class="row">
-                        <div class="col-12"><p><b>Detalls de la teva reserva</b></p></div>
+                        <div class="col-12"><p><b>Booking details</b></p></div>
                     </div>
                     <div class="row">
                         <div class="col-2">

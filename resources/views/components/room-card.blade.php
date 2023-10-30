@@ -13,7 +13,7 @@
             <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-dark px-2">{{ $room->price }}&euro;</span> <span class="float-end small text-muted">{{ $room->establishment->city }}</span> </div>            
             <h5 class="card-title">{{ $room->name }} <span class="float-end badge rounded-pill bg-dark py-1 px-3">{{ $room->occupancy }} <i class="fa fa-user "></i></span></h5>
             <div class="cart-text">{{ $room->description }}</div>
-            <div class="d-grid gap-2 my-4"> <a href="{{ route('room.show', ['id' => $room->id]) }}" class="btn btn-success">Reserva</a> </div>
+            <div class="d-grid gap-2 my-4"> <a href="{{ route('room.show', ['id' => $room->id]) }}" class="btn btn-success">Book</a> </div>
         </div>
     </div>
 </div>

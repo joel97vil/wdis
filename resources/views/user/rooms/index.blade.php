@@ -30,10 +30,10 @@
                 <td>{{$room->price}}</td>
                 <td>{{$room->comments}}</td>
                 <td>
-                    <a href="#">Editar</a>
+                    <a href="#">Edit</a>
                 </td>
                 <td>
-                    <a href="#">Borrar</a>
+                    <a href="#">Delete</a>
                 </td>
             </tr>
         @endforeach 

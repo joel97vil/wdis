@@ -5,12 +5,12 @@
         <div class="form-group">
             <div class="row">
                 <div class="col-6">
-                    <label for="name" class="font-weight-bold">Nom Habitació</label>
-                    <input class="form-control c-input" id="name" aria-label="Nom Habitació" name="name" type="text" value="" />
+                    <label for="name" class="font-weight-bold">Room name</label>
+                    <input class="form-control c-input" id="name" aria-label="Room name" name="name" type="text" value="" />
                 </div>
                 <div class="col-6">
-                    <label for="establishment">Establiment</label>
-                    <select class="form-control c-input c-select" name="establishment" aria-label="Establiment" id="establishment">
+                    <label for="establishment">Establishment</label>
+                    <select class="form-control c-input c-select" name="establishment" aria-label="Establishment" id="establishment">
                         @foreach(getEstablishments() as $establishment)
                             <option value="{{ $establishment->id }}">{{ $establishment->name }}</option>
                         @endforeach
@@ -19,12 +19,12 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <label for="address">Adreça</label>
-                    <input class="form-control c-input" name="address" type="text" aria-label="Adreça" id="address" value=""/>
+                    <label for="address">Direction</label>
+                    <input class="form-control c-input" name="address" type="text" aria-label="Direction" id="address" value=""/>
                 </div>
                 <div class="col-3">
-                    <label for="photo">Imatge de l'habitació</label>
-                    <input type="file" class="form-control-file c-input" id="photo" name="photo" aria-label="Imatge de l'habitació">
+                    <label for="photo">Room imatge</label>
+                    <input type="file" class="form-control-file c-input" id="photo" name="photo" aria-label="Room image">
                 </div>
                 <div class="col-3">
                     @if(strlen($room->photo) > 0)
@@ -34,12 +34,12 @@
             </div>
             <div class="row">
                 <div class="col-3">
-                    <label for="occupancy">Capacitat</label>
-                    <input class="form-control c-input" name="occupancy" id="occupancy" aria-label="Capacitat" type="number" value="" />
+                    <label for="occupancy">Occupancy</label>
+                    <input class="form-control c-input" name="occupancy" id="occupancy" aria-label="Occupancy" type="number" value="" />
                 </div>
                 <div class="col-3">
-                    <label for="price">Preu</label>
-                    <input class="form-control c-input" name="price" type="text" id="price" aria-label="Preu" value="" />
+                    <label for="price">Price</label>
+                    <input class="form-control c-input" name="price" type="text" id="price" aria-label="Price" value="" />
                 </div>
                 <div class="col-6">
                     <?php
@@ -60,21 +60,21 @@
 
             <div class="row">
                 <div class="col-12">
-                    <label for="description">Descripció</label>
-                    <textarea class="form-control c-input" name="description" id="description" aria-label="Descripció" cols="55" rows="5"></textarea>
+                    <label for="description">Description</label>
+                    <textarea class="form-control c-input" name="description" id="description" aria-label="Description" cols="55" rows="5"></textarea>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12">
-                    <label for="comments">Comentaris</label>
-                    <textarea class="form-control c-input" name="comments" id="comments" aria-label="Comentaris" cols="55" rows="5"></textarea>
+                    <label for="comments">Comments</label>
+                    <textarea class="form-control c-input" name="comments" id="comments" aria-label="Comments" cols="55" rows="5"></textarea>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12">
-                    <label class="form-check-label"><input type="checkbox" required="required"> Accepto els <a href="{{ route('termes') }}" target="_blank">termes i condicions</a> d'aquest lloc web</label>
+                    <label class="form-check-label"><input type="checkbox" required="required"> I accept all the <a href="{{ route('termes') }}" target="_blank">terms and conditions</a> of this website</label>
                 </div>
             </div>
 
@@ -82,11 +82,11 @@
 
             <div class="row">
                 <div class="col-12">
-                    <button aria-label="Guardar" class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Guardar</button>
+                    <button aria-label="Guardar" class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Save</button>
                     @if(auth()->user()->role == 800)
-                        <a href="{{ route('admin.rooms') }}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Enrere</a>
+                        <a href="{{ route('admin.rooms') }}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Back</a>
                     @else
-                        <a href="{{ route('landing') }}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Enrere</a>
+                        <a href="{{ route('landing') }}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Back</a>
                     @endif
                 </div>
             </div>

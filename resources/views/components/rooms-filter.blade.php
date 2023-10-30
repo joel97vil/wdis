@@ -43,4 +43,11 @@
     <div class="c-rooms-filter__title fw-bold mt-2">Occupancy:</div>
 
     <div class="c-rooms-filter__title fw-bold mt-2">Price:</div>
+
+    <div class="c-rooms-filter__title fw-bold mt-2">Available dates:
+            <label for="initial_date" id="initial_date_label" style="display:none;">Initial date:</label>
+            <input type="text" name="initial_date" id="initial_date" class="form-control" style="display:none;"/>  
+            <label for="final_date" id="final_date_label" style="display:none;">Final date:</label>
+            <input type="text" name="final_date" id="final_date" class="form-control" style="display:none;"/>  
+    </div>
 </div>
